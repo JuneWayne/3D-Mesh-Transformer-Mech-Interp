@@ -10,30 +10,32 @@
     :root { --bg: #121315; --ink: #eceef0; --mute: #9399a1; --line: #3b3f45; --accent: #8ea2ff; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 1100px; margin: 0 auto; padding: 40px 16px 56px; display: grid; gap: 20px; }
-  h1 { margin: 0; font-size: 28px; line-height: 1.2; }
-  .meta { color: var(--mute); margin: 6px 0 0; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
-  a { color: var(--accent); }
-  .viewer { width: 100%; height: 80vh; min-height: 480px; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
-  .note { color: var(--mute); font-size: 14px; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--bg); color: var(--ink); font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+         display: flex; flex-direction: column; }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; padding: 8px 16px; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0; font-size: 16px; font-weight: 600; flex: 1 1 auto; }
+  h1 span { color: var(--mute); font-weight: 400; }
+  a, button { color: var(--accent); font: inherit; }
+  button { background: none; border: 1px solid var(--line); border-radius: 4px; padding: 3px 10px; cursor: pointer; }
+  iframe { flex: 1 1 auto; width: 100%; border: 0; display: block; background: #000; }
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <h1>Head Replacement for Efficient Mesh Generation</h1>
-    <p class="meta">Ethan Cao, Spatial AI Lab, University of Virginia. Preliminary findings, November 2026.</p>
-  </header>
-  <p>What do individual attention heads do in autoregressive mesh generators (MeshGPT, MeshXL, DeepMesh, MeshMosaic), and can heads with consistent triangle preferences be replaced by simple rules?</p>
-  <div class="links">
-    <a href="slides/preliminary-findings.pdf">Open the slides (PDF)</a>
-    <a href="https://github.com/JuneWayne/3D-Mesh-Transformer-Mech-Interp">Code on GitHub</a>
-  </div>
-  <object class="viewer" data="slides/preliminary-findings.pdf" type="application/pdf">
-    <p class="note">Your browser cannot show the slides here. <a href="slides/preliminary-findings.pdf">Open the PDF</a> instead.</p>
-  </object>
-</main>
+<header>
+  <h1>Head Replacement for Efficient Mesh Generation <span>· Ethan Cao, University of Virginia</span></h1>
+  <a href="slides/head-replacement.pptx">Download PowerPoint</a>
+  <a href="slides/preliminary-findings.pdf">PDF</a>
+  <a href="https://github.com/JuneWayne/3D-Mesh-Transformer-Mech-Interp">Code</a>
+  <button id="fs" type="button">Full screen</button>
+</header>
+<iframe id="deck" title="Slides" allowfullscreen
+  src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fjunewayne.github.io%2F3D-Mesh-Transformer-Mech-Interp%2Fslides%2Fhead-replacement.pptx"></iframe>
+<script>
+  document.getElementById('fs').onclick = function () {
+    var d = document.getElementById('deck');
+    (d.requestFullscreen || d.webkitRequestFullscreen || function () {}).call(d);
+  };
+</script>
 </body>
 </html>
