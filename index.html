@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Head Replacement for Efficient Mesh Generation</title>
+<style>
+  :root { --bg: #fbfbfa; --ink: #17191c; --mute: #6b7078; --line: #d6d9dd; --accent: #2346d6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121315; --ink: #eceef0; --mute: #9399a1; --line: #3b3f45; --accent: #8ea2ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 16px 56px; display: grid; gap: 20px; }
+  h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+  .meta { color: var(--mute); margin: 6px 0 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+  a { color: var(--accent); }
+  .viewer { width: 100%; height: 80vh; min-height: 480px; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+  .note { color: var(--mute); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Head Replacement for Efficient Mesh Generation</h1>
+    <p class="meta">Ethan Cao, Spatial AI Lab, University of Virginia. Preliminary findings, November 2026.</p>
+  </header>
+  <p>What do individual attention heads do in autoregressive mesh generators (MeshGPT, MeshXL, DeepMesh, MeshMosaic), and can heads with consistent triangle preferences be replaced by simple rules?</p>
+  <div class="links">
+    <a href="slides/preliminary-findings.pdf">Open the slides (PDF)</a>
+    <a href="https://github.com/JuneWayne/3D-Mesh-Transformer-Mech-Interp">Code on GitHub</a>
+  </div>
+  <object class="viewer" data="slides/preliminary-findings.pdf" type="application/pdf">
+    <p class="note">Your browser cannot show the slides here. <a href="slides/preliminary-findings.pdf">Open the PDF</a> instead.</p>
+  </object>
+</main>
+</body>
+</html>
