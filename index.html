@@ -18,19 +18,17 @@
   h1 span { color: var(--mute); font-weight: 400; }
   a, button { color: var(--accent); font: inherit; }
   button { background: none; border: 1px solid var(--line); border-radius: 4px; padding: 3px 10px; cursor: pointer; }
-  iframe { flex: 1 1 auto; width: 100%; border: 0; display: block; background: #000; }
+  iframe { flex: 1 1 auto; width: 100%; border: 0; display: block; background: #525659; }
 </style>
 </head>
 <body>
 <header>
   <h1>Head Replacement for Efficient Mesh Generation <span>· Ethan Cao, University of Virginia</span></h1>
-  <a href="slides/head-replacement.pptx">Download PowerPoint</a>
-  <a href="slides/preliminary-findings.pdf">PDF</a>
+  <a href="slides/preliminary-findings.pdf" download>Download PDF</a>
   <a href="https://github.com/JuneWayne/3D-Mesh-Transformer-Mech-Interp">Code</a>
   <button id="fs" type="button">Full screen</button>
 </header>
-<iframe id="deck" title="Slides" allowfullscreen
-  src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fjunewayne.github.io%2F3D-Mesh-Transformer-Mech-Interp%2Fslides%2Fhead-replacement.pptx"></iframe>
+<iframe id="deck" title="Slides" allowfullscreen src="slides/preliminary-findings.pdf#view=Fit&amp;pagemode=none"></iframe>
 <script>
   document.getElementById('fs').onclick = function () {
     var d = document.getElementById('deck');
